@@ -1,0 +1,30 @@
+
+// Расположение по центру
+.text-aling-center {
+   text-align: center;
+}
+// Отступы вниз
+.margin-bottom-10px {
+   margin-bottom: 1rem;
+}
+.margin-bottom-30px {
+   margin-bottom: 3rem;
+}
+.margin-bottom-40px {
+   margin-bottom: 4rem;
+}
+.margin-bottom-50px {
+   margin-bottom: 5rem;
+   @include respond(tab-part) {
+      margin-bottom: 7rem;
+   }
+}
+.margin-bottom-60px {
+   margin-bottom: 6rem;
+}
+.margin-bottom-80px {
+   margin-bottom: 8rem;
+   @include respond(tab-part) {
+      margin-bottom: 4rem;
+   }
+}

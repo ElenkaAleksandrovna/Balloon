@@ -1,0 +1,41 @@
+
+
+// Анимация, которая поднимает кнопку на 7px наверх.
+@keyframes BtnToUp {
+   0% {
+      opacity: 0;
+      transform: translateY(7rem);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+// Анимация, которая двигает кнопку слева направо.
+@keyframes leftToRight {
+   0% {
+      opacity: 0;
+      transform: translateX(-10rem);
+   }
+   80% {
+      transform: translateX(1rem);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+// Анимация, которая двигает кнопку справо налево.
+@keyframes RightToLeft {
+   0% {
+      opacity: 0;
+      transform: translateX(10rem);
+   }
+   80% {
+      transform: translateX(-1rem);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}

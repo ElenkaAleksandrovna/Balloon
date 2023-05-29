@@ -1,0 +1,42 @@
+.section-about {
+   padding-top: 8rem;
+   @include respond(tab-part) {
+      margin-bottom: 32rem;
+   }
+}
+.section-adventure {
+   padding: 21rem  0;
+   background: linear-gradient(90deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-black, 0.7) 99.94%), url('../img/section-adventure.jpg') 0 0 / cover no-repeat;
+   clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+   @include respond(tab-land) {
+      padding: 15rem  0;
+   }
+   @include respond(tab-part) {
+      padding: 10rem  0;
+      clip-path: none;
+   }
+   @include respond(phone) {
+      padding: 10rem  1rem;
+   }
+   // вместо свойсвта выше можно использовать трансформ и селектор класса
+   // для всех дочерних элементов отменяем с помощью селектора
+   // transform: skewY(7deg);
+   // & > * {
+   //    transform: skewY(-7deg);
+   // }
+}
+.section-tour {
+   // padding: 0 10.5rem;
+
+}
+.section-feedBack {
+   position: relative;
+   padding: 8rem 0rem;
+}
+.section-book {
+   padding: 10rem;
+   background: linear-gradient(90deg,($color-brown-light), ($color-brown-dark));
+   @include respond(tab-part) {
+      padding: 4rem;
+   }
+}

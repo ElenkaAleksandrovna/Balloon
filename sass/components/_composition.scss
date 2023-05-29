@@ -1,0 +1,36 @@
+.composition {
+   position: relative;
+   // .composition__photo
+   &__photo {
+      width: 46%;
+      box-shadow: $box-shadow;
+      border-radius: .5rem;
+      position: absolute;
+      z-index: 10;
+      transition: 0.2s all;
+      outline-offset: 1rem;
+      // .composition__photo_n1
+      &_n1 {
+         top: 0;
+         left: 8rem;
+      }
+      // .composition__photo_n2
+      &_n2 {
+         top: 9rem;
+         right: 0rem;
+      }
+      // .composition__photo_n3
+      &_n3 {
+         top: 16rem;
+         left: 11.5rem;
+      }
+      &:hover {
+         transform: scale(1.1);
+         z-index: 20;
+         outline: 1rem solid $color-brown-light;
+      }
+   }
+   &:hover &__photo:not(:hover) {
+      transform: scale(0.95);
+   }
+}

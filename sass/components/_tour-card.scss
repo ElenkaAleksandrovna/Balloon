@@ -1,0 +1,187 @@
+
+.tour-card {
+   height: 50rem;
+   perspective: 150rem;
+   -moz-perspective: 150rem;
+   position: relative;
+   @media only screen and (max-width: 900px), (hover:none) {
+      height: auto;
+   }
+   // .tour-card__side
+   &__side {
+      height: 50rem;
+      transition: .7s all ease-out;
+      color: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      backface-visibility: hidden;
+      box-shadow: $box-shadow;
+      border-radius: .5rem;
+      overflow: hidden;
+      @media only screen and (max-width: 900px), (hover:none) {
+         height: auto;
+         position: relative;
+      }
+      // .tour-card__side_front
+      &_front {
+         @media only screen and (max-width: 900px), (hover:none) {
+            padding-bottom: 9rem;
+         }
+      }
+      // .tour-card__side_back
+      &_back {
+         transform: rotateY(180deg);
+         background: linear-gradient(156.85deg, $color-brown-light 3.65%, $color-brown-dark 100%);
+         @media only screen and (max-width: 900px), (hover:none) {
+            transform: none;
+            padding: 5rem;
+            clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+            padding-top: 12rem;
+            margin-top: -8.5rem;
+         }
+      }
+   }
+   &:hover &__side_front {
+      transform: rotateY(-180deg);
+      @include respond(tab-part) {
+         transform: none;
+      }
+   }
+   &:hover &__side_back {
+      transform: rotateY(0);
+      @include respond(tab-part) {
+         transform: none;
+      }
+   }
+   // .tour-card__img
+   &__img {
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
+      background-blend-mode: hard-light;;
+      height: 21rem;
+      // .tour-card__img_1
+      &_1 {
+         background: $color-brown-light url('../img/tour/tour-card-1.jpg') center / cover no-repeat;
+      }
+      // .tour-card__img_2
+      &_2 {
+         background: $color-brown-light url('../img/tour/tour-card-2.jpg') center / cover no-repeat;
+      }
+      // .tour-card__img_3
+      &_3 {
+         background: $color-brown-light url('../img/tour/tour-card-3.jpg') center / cover no-repeat;
+      }
+      @media only screen and (max-width: 900px), (hover:none) {
+         height: 32rem;
+         margin-bottom: 5rem;
+      }
+   }
+
+   // .tour-card__title
+   &__title {
+      position: absolute;
+      top: 18rem;
+      right: 0rem;
+      font-weight: 300;
+      font-size: 2.8rem;
+      line-height: 3.4rem;
+      text-align: right;
+      letter-spacing: .2rem;
+      text-transform: uppercase;
+      @include respond(tab-part) {
+         top: 25rem;
+         font-size: 4rem;
+      }
+   }
+   // .tour-card__span
+   &__span {
+      padding: 1rem 2rem .3rem 2rem;
+      background: linear-gradient(90deg, $color-brown-light 3.65%, $color-brown-dark 100%);
+      // .tour-card__span_1
+      &_1 {
+      }
+      // .tour-card__span_2
+      &_2 {
+         position: absolute;
+         top: 3.4rem;
+         right: 0rem;
+         padding-bottom: 1rem;
+         @include respond(tab-part) {
+            top: 4rem;
+         }
+      }
+   }
+   // .tour-card__descr
+   &__descr {
+      ul {
+         list-style: none;
+         width: 75%;
+         margin: 0 auto;
+         text-align: center;
+         li {
+            display: inline-block;
+            font-size: $font-size-paragraph;
+            letter-spacing: .2rem;
+            color: $color-grey;
+            border-bottom: 1px solid $color-grey;
+            text-align: center;
+            line-height: 1.9rem;
+            font-weight: 700;
+            &:not(:last-child) {
+               margin-bottom: 2rem;
+            }
+            @include respond(tab-land) {
+               font-size: 1.5rem;
+            }
+            @include respond(tab-part) {
+               font-size: 2rem;
+            }
+         }
+      }
+   }
+
+   // .tour-card__backSide-box
+   &__backSide-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @media only screen and (max-width: 900px), (hover:none) {
+         position: relative;
+         top: 0;
+         left: 0;
+         transform: none;
+         text-align: center;
+      }
+   }
+
+   // .tour-card__text
+   &__text {
+      margin-bottom: 8rem;
+      color: $color-white;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: .2rem;
+      @media only screen and (max-width: 900px), (hover:none) {
+         margin-bottom: 3rem;
+      }
+      // .tour-card__text_1
+      &_1 {
+         font-weight: 300;
+         font-size: $font-size-paragraph;
+         line-height: 1.9rem;
+      }
+      // .tour-card__text_2
+      &_2 {
+         font-weight: 500;
+         font-size: 6rem;
+         line-height: 7rem;
+      }
+   }
+}
+
+
+
+
+

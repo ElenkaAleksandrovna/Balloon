@@ -1,0 +1,52 @@
+
+.footer {
+   background: #333;
+   padding: 8rem;
+   @include respond(tab-part) {
+      padding: 5rem;
+   }
+   // .footer__logo
+   &__logo {
+      width: 12rem;
+      @include respond(tab-part) {
+         width: 9rem;
+      }
+   }
+   // .footer__list
+   &__list {
+      text-align: center;
+   }
+   // .footer__item
+   &__item {
+      display: inline-block;
+      &:not(:last-child) {
+         margin-right: 5rem;
+      }
+      @include respond(tab-land) {
+         &:not(:last-child) {
+            margin-right: 2.5rem;
+         }
+      }
+      @include respond(tab-part) {
+         margin: 2rem;
+      }
+   }
+   // .footer__link
+   &__link {
+      &:link, &:visited {
+         font-weight: 300;
+         font-size: $font-size-paragraph;
+         line-height: 1.9rem;
+         letter-spacing: .2rem;
+         color: $color-grey;
+         text-decoration: none;
+         text-transform: uppercase;
+      }
+      &:active {
+
+      }
+      &:hover {
+         color: $color-white;
+      }
+   }
+}
